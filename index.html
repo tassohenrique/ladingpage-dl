@@ -92,6 +92,38 @@
     text-transform:uppercase;
   }
   .plate .plate-label b{ display:block; font-size:13px; letter-spacing:0.04em; font-weight:500; }
+
+  section{ padding:84px 0; }
+  section + section{ border-top:1px solid var(--line); }
+  h2{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:500;
+    font-size:clamp(28px, 3.6vw, 38px);
+    margin:0;
+  }
+
+  .about-grid{ display:grid; grid-template-columns:1fr; gap:40px; }
+  @media (min-width:860px){ .about-grid{ grid-template-columns:1.2fr 0.8fr; gap:56px; } }
+  .about-grid p{ color:var(--muted); font-size:16.5px; max-width:56ch; }
+  .about-grid p + p{ margin-top:16px; }
+  .about-grid strong{ color:var(--ink); font-weight:600; }
+
+  .dossier{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:26px 28px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:13.5px;
+  }
+  .dossier .row{
+    display:flex; justify-content:space-between; gap:18px;
+    padding:13px 0;
+    border-top:1px dashed var(--line);
+  }
+  .dossier .row:first-child{ border-top:none; padding-top:0; }
+  .dossier .row span:first-child{ color:var(--muted); }
+  .dossier .row span:last-child{ text-align:right; }
 </style>
 </head>
 <body>
@@ -118,6 +150,25 @@
     </div>
   </div>
 </header>
+
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Sobre</span>
+      <h2 style="margin-top:14px;">Medicina por escolha, dedicação por rotina.</h2>
+      <p style="margin-top:22px;">Formado em Medicina pela <strong>UNIDERP</strong>, em Campo Grande (MS), Celso construiu sua trajetória acadêmica em torno de um princípio simples: entender o paciente por inteiro antes de tratar apenas o sintoma. Essa forma de olhar é o que hoje o aproxima da <strong>Radiologia</strong> — a especialidade que transforma imagens em respostas.</p>
+      <p>Atualmente em formação para se tornar radiologista, dedica seus estudos à leitura fina de exames de imagem: raio-X, tomografia, ressonância e ultrassonografia. É um trabalho de precisão que exige paciência, método e, sobretudo, cuidado — os mesmos valores que o trouxeram até a medicina.</p>
+      <p>Mais do que uma profissão, a medicina é, para Celso, uma vocação: a certeza de que cada exame analisado e cada laudo escrito representam uma pessoa do outro lado, esperando por clareza.</p>
+    </div>
+    <div class="dossier">
+      <div class="row"><span>Nome</span><span>Celso Dal Lago</span></div>
+      <div class="row"><span>Formação</span><span>Medicina — UNIDERP</span></div>
+      <div class="row"><span>Cidade</span><span>Campo Grande, MS</span></div>
+      <div class="row"><span>Foco atual</span><span>Radiologia e Diagn. por Imagem</span></div>
+      <div class="row"><span>Princípio</span><span>Medicina por amor</span></div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
