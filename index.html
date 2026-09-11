@@ -124,6 +124,33 @@
   .dossier .row:first-child{ border-top:none; padding-top:0; }
   .dossier .row span:first-child{ color:var(--muted); }
   .dossier .row span:last-child{ text-align:right; }
+
+  .section-head{ display:flex; flex-direction:column; gap:14px; max-width:640px; margin-bottom:48px; }
+
+  .timeline{ display:grid; gap:0; border-left:1px solid var(--line); margin-left:6px; }
+  .tl-item{ position:relative; padding:0 0 44px 34px; }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-item::before{
+    content:attr(data-n);
+    position:absolute; left:-1px; top:0;
+    transform:translateX(-50%);
+    width:34px; height:34px;
+    border-radius:50%;
+    background:var(--surface);
+    border:1px solid var(--accent);
+    color:var(--accent);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .tl-item h3{ font-size:19px; font-weight:600; margin:0; }
+  .tl-item .when{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px; letter-spacing:0.06em;
+    color:var(--accent); text-transform:uppercase;
+    display:block; margin-bottom:8px;
+  }
+  .tl-item p{ color:var(--muted); margin:8px 0 0; max-width:56ch; }
 </style>
 </head>
 <body>
@@ -166,6 +193,32 @@
       <div class="row"><span>Cidade</span><span>Campo Grande, MS</span></div>
       <div class="row"><span>Foco atual</span><span>Radiologia e Diagn. por Imagem</span></div>
       <div class="row"><span>Princípio</span><span>Medicina por amor</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="trajetoria">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Trajetória</span>
+      <h2>Do diploma ao laudo: uma formação em construção.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item" data-n="01">
+        <span class="when">Graduação</span>
+        <h3>Medicina — UNIDERP, Campo Grande (MS)</h3>
+        <p>Formação médica completa, com base sólida em clínica geral e no raciocínio diagnóstico que hoje orienta seus estudos em imagem.</p>
+      </div>
+      <div class="tl-item" data-n="02">
+        <span class="when">Atualmente</span>
+        <h3>Estudos em Radiologia e Diagnóstico por Imagem</h3>
+        <p>Aprofundamento contínuo na interpretação de exames radiológicos, com foco em precisão técnica e atenção ao contexto clínico de cada paciente.</p>
+      </div>
+      <div class="tl-item" data-n="03">
+        <span class="when">Próximo passo</span>
+        <h3>Especialização em Radiologia</h3>
+        <p>O objetivo de se tornar radiologista segue como um compromisso diário — cada imagem estudada é um passo a mais nessa direção.</p>
+      </div>
     </div>
   </div>
 </section>
