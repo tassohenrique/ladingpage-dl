@@ -151,6 +151,20 @@
     display:block; margin-bottom:8px;
   }
   .tl-item p{ color:var(--muted); margin:8px 0 0; max-width:56ch; }
+
+  .imaging-grid{
+    display:grid; grid-template-columns:1fr; gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  @media (min-width:700px){ .imaging-grid{ grid-template-columns:1fr 1fr; } }
+  .imaging-card{ background:var(--surface); padding:32px; }
+  .imaging-card .icon{ width:46px; height:46px; color:var(--accent); margin-bottom:18px; }
+  .imaging-card .icon svg{ width:100%; height:100%; }
+  .imaging-card h3{ font-size:18px; font-weight:600; margin:0; }
+  .imaging-card p{ color:var(--muted); font-size:15px; margin:10px 0 0; }
 </style>
 </head>
 <body>
@@ -218,6 +232,37 @@
         <span class="when">Próximo passo</span>
         <h3>Especialização em Radiologia</h3>
         <p>O objetivo de se tornar radiologista segue como um compromisso diário — cada imagem estudada é um passo a mais nessa direção.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="radiologia">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Radiologia</span>
+      <h2>Enxergar o que não está à mostra.</h2>
+    </div>
+    <div class="imaging-grid">
+      <div class="imaging-card">
+        <div class="icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="6" width="32" height="36" rx="2"/><path d="M24 12c-6 0-10 6-10 12 0 10-6 8-6 16h32c0-8-6-6-6-16 0-6-4-12-10-12Z"/><path d="M18 26c2 6 4 8 6 8s4-2 6-8"/></svg></div>
+        <h3>Radiografia (Raio-X)</h3>
+        <p>Primeira janela para o corpo — essencial para triagem rápida de ossos, tórax e articulações.</p>
+      </div>
+      <div class="imaging-card">
+        <div class="icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="9"/><path d="M24 7v6M24 35v6M7 24h6M35 24h6"/></svg></div>
+        <h3>Tomografia Computadorizada</h3>
+        <p>Cortes detalhados que revelam estruturas internas com profundidade e precisão milimétrica.</p>
+      </div>
+      <div class="imaging-card">
+        <div class="icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 6c9 4 15 10 15 18s-6 14-15 18c-9-4-15-10-15-18S15 10 24 6Z"/><path d="M24 14v20M16 24h16"/></svg></div>
+        <h3>Ressonância Magnética</h3>
+        <p>Contraste de tecidos moles para diagnósticos finos em neurologia, ortopedia e além.</p>
+      </div>
+      <div class="imaging-card">
+        <div class="icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 30c4-14 12-20 16-20s12 6 16 20"/><path d="M8 30c0 6 6 10 16 10s16-4 16-10"/><path d="M17 30q7-6 14 0"/></svg></div>
+        <h3>Ultrassonografia</h3>
+        <p>Acompanhamento em tempo real, seguro e acessível — do pré-natal ao abdome.</p>
       </div>
     </div>
   </div>
