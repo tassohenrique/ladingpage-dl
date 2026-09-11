@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Landing page do médico Celso Dal Lago, formado em Medicina pela UNIDERP e em formação para Radiologia.">
 <title>Celso Dal Lago — Medicina</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +44,9 @@
   a{color:inherit;}
 
   .nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(243,246,246,0.86);
+    backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
   .nav .wrap{
@@ -212,6 +216,14 @@
     color:var(--muted);
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
   }
+
+  @media (prefers-reduced-motion:no-preference){
+    .fade-up{ animation:fadeUp .7s ease both; }
+    @keyframes fadeUp{
+      from{ opacity:0; transform:translateY(10px); }
+      to{ opacity:1; transform:none; }
+    }
+  }
 </style>
 </head>
 <body>
@@ -230,12 +242,12 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div>
+    <div class="fade-up">
       <span class="eyebrow">Medicina · UNIDERP, Campo Grande – MS</span>
       <h1>Um olhar atento<br>para o que a <em>imagem</em><br>revela.</h1>
       <p class="lede">Celso Dal Lago é médico formado com um compromisso simples: cuidar de cada pessoa com atenção, estudo constante e a certeza de que a medicina é, antes de tudo, um ato de amor.</p>
     </div>
-    <div class="plate">
+    <div class="plate fade-up">
       <img src="celso.jpg" alt="Dr. Celso Dal Lago, de jaleco e estetoscópio">
       <div class="plate-label">
         <span>Celso Dal Lago<br><b>Medicina — em formação para Radiologia</b></span>
